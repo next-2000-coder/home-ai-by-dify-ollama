@@ -1,6 +1,7 @@
 #!/bin/bash
 
 IMAGES=(
+"busybox:1.37.0"
 "bitnami/redis:7.4.1"
 "langgenius/dify-api:0.10.1"
 "langgenius/dify-web:0.10.1"
@@ -13,6 +14,6 @@ IMAGES=(
 )
 
 for item in "${IMAGES[@]}"; do
-  echo "start pull ${item}" 
+  echo "start pull ${item}"
   ./pull-image.sh "${item}"
 done
